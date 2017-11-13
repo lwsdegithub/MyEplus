@@ -33,8 +33,6 @@ public class Mine_Fragment extends Fragment implements View.OnClickListener{
     private RelativeLayout share;
     private RelativeLayout advice;
     private RelativeLayout about;
-
-    private LemonHelloInfo lemonHelloInfo;
     //private AdviceDialog adviceDialog;
     @Nullable
     @Override
@@ -58,7 +56,6 @@ public class Mine_Fragment extends Fragment implements View.OnClickListener{
         advice.setOnClickListener(this);
         about.setOnClickListener(this);
 
-
         //adviceDialog=new AdviceDialog(getActivity());
         //adviceDialog.setTitle("吐槽一下");
     }
@@ -76,7 +73,6 @@ public class Mine_Fragment extends Fragment implements View.OnClickListener{
             case R.id.share_Layout:
                 break;
             case R.id.advice_Layout:
-                lemonHelloInfo.show(getActivity());
                 //adviceDialog.show();
                 break;
             case R.id.about_Layout:
