@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:background="@color/bottom"
+    android:layout_height="55dp">
+    <LinearLayout
+        android:id="@+id/Msg_Tab_Layout"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+        <ImageView
+            android:scaleType="fitCenter"
+            android:paddingTop="5sp"
+            android:layout_weight="1"
+            android:src="@drawable/res_ped"
+            android:id="@+id/Msg_Img"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+        <TextView
+            android:textColor="@color/text_black"
+            android:gravity="center"
+            android:text="@string/msg_string"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Friends_Tab_Layout"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+        <ImageView
+            android:paddingTop="5sp"
+            android:layout_weight="8"
+            android:src="@drawable/demands_unp"
+            android:id="@+id/Friends_Img"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+        <TextView
+            android:textColor="@color/text_black"
+            android:gravity="center"
+            android:text="@string/friends_string"
+            android:layout_weight="8"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Social_Tab_Layout"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+        <ImageView
+            android:paddingTop="5sp"
+            android:layout_weight="8"
+            android:src="@drawable/new_unp"
+            android:id="@+id/Social_Img"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+        <TextView
+            android:textColor="@color/text_black"
+            android:gravity="center"
+            android:text="@string/social_string"
+            android:layout_weight="8"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Mine_Tab_Layout"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+        <ImageView
+            android:paddingTop="5sp"
+            android:layout_weight="8"
+            android:src="@drawable/mine_unp"
+            android:id="@+id/Mine_Img"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+        <TextView
+            android:textColor="@color/text_black"
+            android:gravity="center"
+            android:text="@string/mine_string"
+            android:layout_weight="8"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+    </LinearLayout>
+</LinearLayout>

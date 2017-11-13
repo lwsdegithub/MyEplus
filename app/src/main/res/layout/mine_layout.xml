@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:background="@color/bottom"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/imageview_textview_arrow_to_right_personal_information"  />
+        <include layout="@layout/devided_line"/>
+        <include layout="@layout/devided_part"/>
+        <include layout="@layout/devided_line"/>
+        <include layout="@layout/imageview_textview_arrow_to_right_my_favorite" />
+        <include layout="@layout/devided_line"/>
+        <include layout="@layout/imageview_textview_arrow_to_right_my_submit"/>
+        <include layout="@layout/devided_line"/>
+        <include layout="@layout/devided_part"/>
+        <include layout="@layout/devided_line"/>
+        <include layout="@layout/imageview_textview_arrow_to_right_share"/>
+        <include layout="@layout/devided_line"/>
+        <include layout="@layout/devided_part"/>
+        <include layout="@layout/devided_line"/>
+        <include layout="@layout/imageview_textview_arrow_to_right_advice"/>
+        <include layout="@layout/devided_line"/>
+        <include layout="@layout/imageview_textview_arrow_to_right_about"  />
+        <include layout="@layout/devided_line"/>
+    </LinearLayout>
+</ScrollView>

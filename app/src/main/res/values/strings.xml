@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Eplus二手书</string>
+    <string name="msg_string">资源</string>
+    <string name="friends_string">需求</string>
+    <string name="social_string">发布</string>
+    <string name="mine_string">我的</string>
+</resources>

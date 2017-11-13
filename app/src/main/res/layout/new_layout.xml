@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/text_black"
+            android:paddingLeft="20dp"
+            android:paddingTop="3dp"
+            android:textSize="20sp"
+            android:text="请选择发布类型："
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <RadioGroup
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:textColor="@color/text_black"
+                android:id="@+id/res_RadioBtn"
+                android:checked="true"
+                android:text="资源"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:textSize="15sp"
+                android:textColor="@color/text_black"
+                android:id="@+id/demands_RadioBtn"
+                android:text="需求"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="5dp"
+            android:textColor="@color/text_black"
+            android:paddingLeft="20dp"
+            android:paddingTop="0dp"
+            android:textSize="20sp"
+            android:text="手机号码："
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <EditText
+            android:textColor="@color/black"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/newTelNumberEt"
+            android:layout_marginRight="50dp"
+            android:inputType="phone"
+            android:background="@drawable/edittext_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="5dp"
+            android:textColor="@color/text_black"
+            android:paddingLeft="20dp"
+            android:paddingTop="0dp"
+            android:textSize="20sp"
+            android:text="联系姓名："
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <EditText
+            android:textColor="@color/black"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/newUserLastNameEt"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/edittext_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="5dp"
+            android:textColor="@color/text_black"
+            android:paddingLeft="20dp"
+            android:paddingTop="0dp"
+            android:textSize="20sp"
+            android:text="书籍名称："
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <EditText
+            android:textColor="@color/black"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/newBookNameEt"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/edittext_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="0dp"
+            android:text="截止日期："
+            android:textColor="@color/text_black"
+            android:textSize="20sp" />
+        <TextView
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/edittext_background"
+            android:textColor="@color/black"
+            android:layout_marginRight="100dp"
+            android:gravity="center"
+            android:text="点击选择时间"
+            android:id="@+id/newDeadLineTv"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="5dp"
+            android:textColor="@color/text_black"
+            android:paddingLeft="20dp"
+            android:paddingTop="0dp"
+            android:textSize="20sp"
+            android:text="详细信息："
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <EditText
+            android:textColor="@color/black"
+            android:lines="2"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/newDetailsEt"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/edittext_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <com.example.myfragment.ViewsDesignedByMySelf.SubmitButton
+        android:id="@+id/submit_Btn"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content" />
+</LinearLayout>
