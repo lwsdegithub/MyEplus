@@ -2,9 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:background="@color/transparent"
-    android:layout_height="200dp">
+    android:layout_height="match_parent">
     <EditText
-        android:lines="4"
+        android:textColor="@color/black"
+        android:layout_margin="20dp"
+        android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     </EditText>

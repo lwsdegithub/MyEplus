@@ -1,6 +1,7 @@
 package com.example.myfragment.FragmentActivity;
 
 import android.app.Fragment;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -33,7 +34,7 @@ public class Mine_Fragment extends Fragment implements View.OnClickListener{
     private RelativeLayout share;
     private RelativeLayout advice;
     private RelativeLayout about;
-    //private AdviceDialog adviceDialog;
+    private AdviceDialog adviceDialog;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -56,8 +57,7 @@ public class Mine_Fragment extends Fragment implements View.OnClickListener{
         advice.setOnClickListener(this);
         about.setOnClickListener(this);
 
-        //adviceDialog=new AdviceDialog(getActivity());
-        //adviceDialog.setTitle("吐槽一下");
+        initAdviceDialog();
     }
     //设置监听，实现跳转
     @Override
@@ -73,7 +73,7 @@ public class Mine_Fragment extends Fragment implements View.OnClickListener{
             case R.id.share_Layout:
                 break;
             case R.id.advice_Layout:
-                //adviceDialog.show();
+                adviceDialog.show();
                 break;
             case R.id.about_Layout:
                 startActivity(new Intent(getActivity(), AboutActivity.class));
@@ -81,6 +81,23 @@ public class Mine_Fragment extends Fragment implements View.OnClickListener{
             default:
                 break;
         }
+    }
+    private void initAdviceDialog(){
+        adviceDialog=new AdviceDialog(getActivity(),R.style.Theme_AppCompat_Light_Dialog_Alert);
+        adviceDialog.setView(View.inflate(getActivity(),R.layout.advice_dialog_layout,null));
+        adviceDialog.setTitle("吐槽一下");
+        adviceDialog.setButton(AlertDialog.BUTTON_POSITIVE, "发送", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                adviceDialog.dismiss();
+            }
+        });
+        adviceDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "取消", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                adviceDialog.dismiss();
+            }
+        });
     }
 
 }

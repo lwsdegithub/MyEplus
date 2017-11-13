@@ -13,8 +13,4 @@
         //一定要，否则有状态栏显示，不能全屏
         <item name="windowNoTitle">true</item>
     </style>
-    <style name="AdvieceDialog" parent="@android:style/Theme.Dialog">
-        <item name="android:windowBackground">@color/transparent</item>
-        <item name="android:windowIsFloating">true</item>
-    </style>
 </resources>
