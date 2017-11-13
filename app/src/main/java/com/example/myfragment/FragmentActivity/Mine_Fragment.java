@@ -57,6 +57,8 @@ public class Mine_Fragment extends Fragment implements View.OnClickListener{
         share.setOnClickListener(this);
         advice.setOnClickListener(this);
         about.setOnClickListener(this);
+
+
         //adviceDialog=new AdviceDialog(getActivity());
         //adviceDialog.setTitle("吐槽一下");
     }
