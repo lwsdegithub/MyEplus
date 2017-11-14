@@ -1,16 +1,21 @@
 package com.example.myfragment.FragmentActivity;
 
 import android.app.Fragment;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.example.myfragment.ActivitiesInMineLayout.AboutActivity;
 import com.example.myfragment.ActivitiesInMineLayout.AdviceDialog;
@@ -27,6 +32,7 @@ import net.lemonsoft.lemonhello.interfaces.LemonHelloActionDelegate;
  */
 
 public class Mine_Fragment extends Fragment implements View.OnClickListener{
+    private static final int UPDATE_UI=0;
     private View view;
     private RelativeLayout personal_information;
     private RelativeLayout my_favorite;
@@ -35,6 +41,7 @@ public class Mine_Fragment extends Fragment implements View.OnClickListener{
     private RelativeLayout advice;
     private RelativeLayout about;
     private AdviceDialog adviceDialog;
+    private EditText adviceEditText;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -85,19 +92,30 @@ public class Mine_Fragment extends Fragment implements View.OnClickListener{
     private void initAdviceDialog(){
         adviceDialog=new AdviceDialog(getActivity(),R.style.Theme_AppCompat_Light_Dialog_Alert);
         adviceDialog.setView(View.inflate(getActivity(),R.layout.advice_dialog_layout,null));
+        adviceEditText=View.inflate(getActivity(),R.layout.advice_dialog_layout,null).findViewById(R.id.advice_Edit_Text);
         adviceDialog.setTitle("吐槽一下");
         adviceDialog.setButton(AlertDialog.BUTTON_POSITIVE, "发送", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                adviceDialog.dismiss();
+                handler.sendEmptyMessage(UPDATE_UI);
             }
         });
         adviceDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "取消", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                adviceDialog.dismiss();
             }
         });
     }
+    private Handler handler=new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            switch (msg.what){
+                case UPDATE_UI:
+                    adviceEditText.setText("");
+                    break;
+            }
+        }
+    };
 
 }

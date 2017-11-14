@@ -4,6 +4,7 @@
     android:background="@color/transparent"
     android:layout_height="match_parent">
     <EditText
+        android:id="@+id/advice_Edit_Text"
         android:textColor="@color/black"
         android:layout_margin="20dp"
         android:layout_gravity="center"
