@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -90,19 +91,23 @@ public class Mine_Fragment extends Fragment implements View.OnClickListener{
         }
     }
     private void initAdviceDialog(){
+        LinearLayout adviceDialogLinearLayout= (LinearLayout) getActivity().getLayoutInflater().inflate(R.layout.advice_dialog_layout,null);
+        adviceEditText=adviceDialogLinearLayout.findViewById(R.id.advice_Edit_Text);
         adviceDialog=new AdviceDialog(getActivity(),R.style.Theme_AppCompat_Light_Dialog_Alert);
-        adviceDialog.setView(View.inflate(getActivity(),R.layout.advice_dialog_layout,null));
-        adviceEditText=View.inflate(getActivity(),R.layout.advice_dialog_layout,null).findViewById(R.id.advice_Edit_Text);
+        adviceDialog.setView(adviceDialogLinearLayout);
         adviceDialog.setTitle("吐槽一下");
         adviceDialog.setButton(AlertDialog.BUTTON_POSITIVE, "发送", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
+                //向handler发送更新ui的信息
                 handler.sendEmptyMessage(UPDATE_UI);
             }
         });
         adviceDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "取消", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
+                //向handler发送更新ui的信息
+                handler.sendEmptyMessage(UPDATE_UI);
             }
         });
     }
@@ -112,7 +117,7 @@ public class Mine_Fragment extends Fragment implements View.OnClickListener{
             super.handleMessage(msg);
             switch (msg.what){
                 case UPDATE_UI:
-                    adviceEditText.setText("");
+                    adviceEditText.getText().clear();
                     break;
             }
         }
