@@ -100,7 +100,12 @@ public class Mine_Fragment extends Fragment implements View.OnClickListener{
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 //向handler发送更新ui的信息
-                handler.sendEmptyMessage(UPDATE_UI);
+                if (adviceEditText.getText().toString().isEmpty()){
+
+                }
+                else {
+                    handler.sendEmptyMessage(UPDATE_UI);
+                }
             }
         });
         adviceDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "取消", new DialogInterface.OnClickListener() {
@@ -117,6 +122,7 @@ public class Mine_Fragment extends Fragment implements View.OnClickListener{
             super.handleMessage(msg);
             switch (msg.what){
                 case UPDATE_UI:
+                    //清除内容
                     adviceEditText.getText().clear();
                     break;
             }
