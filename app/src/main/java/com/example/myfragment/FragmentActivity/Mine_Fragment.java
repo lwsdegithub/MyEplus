@@ -64,7 +64,7 @@ public class Mine_Fragment extends Fragment implements View.OnClickListener{
         share.setOnClickListener(this);
         advice.setOnClickListener(this);
         about.setOnClickListener(this);
-
+        //实现Advicedialog功能
         initAdviceDialog();
     }
     //设置监听，实现跳转
