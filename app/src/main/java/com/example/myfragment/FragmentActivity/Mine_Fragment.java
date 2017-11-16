@@ -20,6 +20,7 @@ import android.widget.Toast;
 
 import com.example.myfragment.ActivitiesInMineLayout.AboutActivity;
 import com.example.myfragment.ActivitiesInMineLayout.AdviceDialog;
+import com.example.myfragment.ActivitiesInMineLayout.PersonalInformationActivity;
 import com.example.myfragment.R;
 
 import net.lemonsoft.lemonhello.LemonHello;
@@ -73,6 +74,7 @@ public class Mine_Fragment extends Fragment implements View.OnClickListener{
         switch (view.getId()){
             case R.id.personal_information_Layout:
                 //如果已经登录则跳转到个人资料界面，如果没有登录则跳转到登录界面
+                startActivity(new Intent(getActivity(), PersonalInformationActivity.class));
                 break;
             case R.id.my_favorite_Layout:
                 break;
